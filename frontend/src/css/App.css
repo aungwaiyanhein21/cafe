@@ -1,0 +1,327 @@
+/*** This css file contains styles that can be applied in many parts of the application ***/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    min-height: 100vh;
+}
+
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+a {
+    /* text-decoration: none !important; */
+    color: black;
+}
+
+input, select {
+    /* -webkit-appearance:none;
+    -moz-appearance: none; */
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(143, 141, 141);
+    max-width: 100%;
+}
+
+.main-container{
+    padding-top: 80px;
+   
+    min-height: 100vh;
+}
+
+.standard-btn {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: white;
+    color: black;
+
+    box-shadow: 0.7px 0px 9px 6px rgba(0, 0, 0, 0.1);
+}
+.standard-btn:hover {
+    cursor: pointer;
+}
+.standard-btn:active {
+    box-shadow: inset 0.7px 5px 9px 6px rgba(5, 1, 1, 0.2);
+}
+
+/*** custom disabled button ***/
+.disabled-btn {
+    background-color: rgb(73, 73, 73);
+    color: black;
+    opacity: 0.3;
+}
+.disabled-btn:hover {
+    cursor:not-allowed;
+}
+
+
+
+/* fixed bottom bar for adding product and checkout */
+.bottom-fixed-container {
+    position: fixed;
+    padding: 15px;
+    bottom: 0px;
+    /* background-color: red; */
+    border-top: 1px solid rgb(219, 219, 219);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+/*********  Header  *********/ 
+header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+    padding: 0px 20px;
+    min-height: 70px;
+
+    border-bottom: 2px solid rgb(187, 193, 199);
+    box-shadow: 0px 0.1px 2px #dfdddd;
+    
+    position: fixed;
+}
+
+header nav {
+    height: 100%;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+
+
+header li {
+    list-style: none;
+    padding: 0px 10px;
+}
+
+header li a {
+    font-weight: 400;
+    /* margin-left: 40px; */
+    text-decoration: none;
+    color: black;
+
+}
+
+/* header ul li:hover {
+    cursor: pointer;
+} */
+
+/* for burger menu */
+.burger-container {
+    right: 20px;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 20;
+    display: none;
+}
+.burger-container div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+}
+
+
+/*** for login and sign up button ***/
+.btn {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease;
+    outline: none;
+
+    /* box-shadow: 10px 2px 20px 10px rgba(0, 0, 0, 0.09); */
+    box-shadow: 0.7px 0px 9px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+    transform: scale(0.95);
+    
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btn.login:hover {
+	background:linear-gradient(to bottom, #e7e7e7 5%, #ececec 100%);
+    cursor: pointer;
+}
+
+.btn.signup {
+    background-color: rgb(61, 60, 60);
+    color: white;
+    transition: all .2s ease;
+}
+.btn.signup:hover {
+    background-color: rgb(121, 120, 120);
+    cursor: pointer;
+}
+
+/*** cart item number positioned on top of cart icon ***/
+.cart-item-num {
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    right: -50px;
+    top: -20px;
+    background-color: #2bd156;
+    color: white;
+    font-size: 0.9em;
+}
+
+@keyframes animate-cart-num {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.cart-item-animate {
+    animation-name: animate-cart-num;
+    animation-duration: 0.8s;
+}
+
+
+/*** for breadcrumbs ***/
+.breadcrumbs {
+    padding: 2px;
+    margin-bottom: 20px;
+    
+}
+
+.breadcrumbs-item {
+    display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after {
+    content: '/';
+    /* content: '\203a'; */
+    margin: 0px 5px;
+    color: #cccccc;
+} 
+
+.breadcrumbs-link {
+    color: #999999;
+}
+.breadcrumbs-link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs-link.active {
+    color: #009578;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+
+
+/********* End of Header  *********/ 
+
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-flow: column nowrap;
+        background-color:rgb(245, 245, 245);
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        width: 70%;
+        padding-top: 3.5rem;
+
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav.open ul {
+        transform: translateX(0);
+    }
+    
+    nav.close ul {
+        transform: translateX(100%);
+    }
+   
+    nav ul li {
+        color: black;
+        text-align: center;
+        padding: 18px 10px;
+    }
+    header ul li a {
+        margin-left: 0px;
+    }
+
+    .burger-container {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column nowrap;
+    }
+   
+    .burger-container.open div:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .burger-container.close div:nth-child(1) {
+        transform: rotate(0deg);
+    }
+    
+    .burger-container.open div:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    .burger-container.close div:nth-child(2) {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+    .burger-container.open div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    .burger-container.close div:nth-child(3) {
+        transform: rotate(0deg);
+    }
+    
+    .burger-container:hover {
+        cursor: pointer;
+    }
+    
+   
+}
+
+
+@media only screen and (max-width: 425px) {
+    .bottom-fixed-container {
+        font-size: 1rem;
+    }
+}
+

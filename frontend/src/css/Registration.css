@@ -1,0 +1,136 @@
+/****** Form container ******/
+.container{
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    /* background-color: red; */
+    min-height: 100vh;
+
+}
+
+/****** container that takes up around 60% in the middle of the page ******/
+.form-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    margin-top: 50px;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    /* margin: 50px 0px; */
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0.7px 0px 9px 6px rgba(0, 0, 0, 0.1);
+}
+
+form > section {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    /* margin-bottom: 50px; */
+    flex-wrap: wrap;
+    align-items: center;
+}
+form > section > * {
+    flex: 1;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-btn {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease;
+    outline: none;
+
+    /* background-color: rgb(10, 202, 74); */
+    background-color: rgb(10, 87, 187);
+    color: white;
+    box-shadow: 0.7px 0px 9px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: -1px 4px 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%); */
+    /* box-shadow: 10px 2px 20px 10px rgba(0, 0, 0, 0.09); */
+}
+.form-btn:hover {
+    cursor: pointer;
+}
+
+.form-link {
+    /* color: rgb(19, 155, 19); */
+    color: rgb(11, 103, 223);
+    text-decoration: underline;
+}
+
+.form-message-container {
+    border: 1px solid rgb(211, 207, 207);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+}
+.form-message-container > div:nth-child(1) {
+    flex: 1;
+}
+.form-message-container > div:not(:first-child) {
+    flex: 10;
+}
+.form-message-container p {
+    font-size: 1.2em;
+}
+
+.error {
+    /* background-color: red; */
+    color: red;
+}
+.success {
+    /* background-color: green; */
+    color: green;
+}
+
+
+@media only screen and (max-width: 425px) {
+    .container{
+        padding-top: 120px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    form {
+        border: none;
+        box-shadow: none;
+    }
+
+    form > section {
+        flex-direction: column;
+        margin-bottom: 30px;
+        align-items: flex-start;
+    }
+
+    form > section input {
+        width: 100%;
+    }
+
+    .form-message-container {
+        flex-direction: column;
+    }
+}

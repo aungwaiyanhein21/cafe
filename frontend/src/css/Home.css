@@ -1,0 +1,88 @@
+/* Main container for home page */
+.info-container {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info-container > div:nth-child(1) {
+    margin-top: 0px;
+}
+
+
+.cover-photo-container {
+    display: flex;
+    background-color: #f2f0eb;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cover-photo {
+    width: 100%;
+}
+.cover-photo-container > div {
+    flex: 1;
+}
+
+.cover-photo-container > div {
+    text-align: center;
+}
+
+
+/* functions that app offers */
+.app-functions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.app-functions > div {
+    margin: 30px;
+    flex: 1;
+    background-color: rgb(209, 233, 213);
+}
+
+.function {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+}
+
+
+.function > div {
+    text-align: center;
+}
+
+.function > div > p {
+    padding: 25px 0px;
+}
+
+.function > div:nth-child(2) {
+    padding: 20px 0px;
+}
+.function > div:nth-child(3) {
+    padding-bottom: 20px;
+}
+
+
+.function img {
+    width: 100%; /* width of container */
+    object-fit: contain;
+}
+
+
+/********** Media Query **********/
+@media only screen and (max-width: 425px) {
+    .cover-photo-container {
+        flex-direction: column;
+    }
+
+    .app-functions {
+        flex-direction: column;
+    }
+}

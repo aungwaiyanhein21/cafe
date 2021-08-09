@@ -18,7 +18,7 @@
 
 <p>For admin:</p>
 <ul>
-    <li>Create categories and products</li>
+    <li>Manage menu by creating, updating and deleting categories and products</li>
 </ul>
 
 <hr>

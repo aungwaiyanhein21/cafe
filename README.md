@@ -27,8 +27,8 @@
 
 <ul>
     <li>MongoDB</li>
-    <li>ExpressJS</li>
-    <li>ReactJS</li>
+    <li>Express</li>
+    <li>React</li>
     <li>NodeJS</li>
 </ul>
 

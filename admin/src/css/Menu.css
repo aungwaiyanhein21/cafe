@@ -1,0 +1,186 @@
+.menu-container {
+    padding-top: 80px;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+}
+
+.menu-container > h1 {
+    text-align: center;
+}
+
+/*** for containing button and tree structure ***/ 
+.menu-container > div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.menu-container > div > div {
+    width: 90%;
+}
+
+
+/*** tree category for products  ***/
+ul {
+    list-style-type: none;
+}
+.tree-container {
+    margin-top: 50px;
+}
+
+
+.tree-container li >  ul {
+    margin: 10px 0px 0px 10px;
+    padding: 20px 0px 0px 20px;
+}
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret::after {
+    content: "\25B6";
+    color: black;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.caret-down::after {
+    transform: rotate(90deg);
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+
+    user-select: none;
+    padding: 10px;
+}
+.edit-container:hover {
+    background-color: rgba(163, 163, 163, 0.2);
+}
+
+.nested {
+    display: none;
+}
+
+
+.active {
+    display: block; 
+}
+
+.menu-btn {
+    /* border-width: 1px;
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-weight: 600;
+    text-align: center; */
+
+    padding: 7px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    
+    transition: 0.2s all;
+}
+.menu-btn:hover {
+    cursor: pointer;
+}
+.menu-btn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+
+
+/*** Action Container ***/
+.action-container > svg {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+
+
+/*** 
+    styling product form inside modal
+***/
+
+.modal-body > section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.modal-body > section > * {
+    flex-basis: 100%;
+}
+
+/* price container */
+.modal-body fieldset > * {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body fieldset > div > * {
+    flex: 1;
+}
+
+.price-container {
+    width: 100%;
+}
+.price-container > input {
+    width: 80%;
+}
+
+
+ 
+
+/*
+.product-container {
+    background-color: red;
+} */
+
+/********** Media Query **********/
+@media only screen and (max-width: 425px) {
+    .tree-container li >  ul {
+        margin: 10px 0px 0px 5px;
+        padding: 5px 0px 0px 5px;
+    }
+
+    .action-container > svg {
+        margin-left: 7px;
+        font-size: 1.2em;
+    }
+
+    .modal-body > section {
+        flex-direction: column;
+    }
+    .modal-body input, .modal-body textarea, .modal-body select {
+        width: 100%;
+    }
+
+    .modal-body > section > * {
+        width: 100%;
+    }
+
+    .modal-body fieldset > * {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+     
+    .price-container > input {
+        width: 80%;
+    }
+    
+}
+

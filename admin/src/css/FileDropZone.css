@@ -1,0 +1,20 @@
+.file-container {
+    margin-top: 30px;
+}
+
+.dropzone {
+    width: 100%;
+    min-height: 150px;
+    border: 1px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.preview-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

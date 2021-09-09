@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea, select, fieldset {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(143, 141, 141);
+  max-width: 100%;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/*********  Header  *********/ 
+header {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  border-bottom: 2px solid rgb(187, 193, 199);
+  box-shadow: 0px 0.1px 2px #dfdddd;
+  
+  position: fixed;
+}
+
+.container {
+  height: 100vh;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('https://i.pinimg.com/originals/e8/07/57/e807579edb93300913645941f251c97d.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position:center; */
+  /* background-position: center; */
+
+  height: 100vh;
+
+
+}
+
+.btn {
+  
+  margin-top: 20px;
+  padding: 16px 16px;
+  border: 1px solid rgb(102, 163, 231);
+  background-color: rgb(41, 98, 172);
+  color: #f2f2f2;
+  border-radius: 2px;
+
+  width: 200px;
+  text-align: center;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+
+/********** Media Query **********/
+@media only screen and (max-width: 425px) {
+  .container {
+    background-position: center;
+  }
+}

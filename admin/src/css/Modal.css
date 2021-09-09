@@ -1,0 +1,66 @@
+.modal-root {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(1,1,1,0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-container {
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    width: 70%;
+    max-height: 90%;
+    overflow-y: auto;
+    /* transition: all 2s ease-in-out 2s; */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-container > div{
+    padding: 30px;
+}
+
+.modal-container > div:not(:last-of-type) {
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body {
+    flex: 10;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/*** cross btn to close the modal ***/
+.cross-btn {
+    position: relative;
+    top: -20px;
+    right: -30px;
+    padding: 10px;
+    font-size: 20px;
+}
+.cross-btn:hover {
+    background-color:rgb(223, 222, 222, 0.4);
+    cursor: pointer;
+}
+
+
+/********** Media Query **********/
+@media only screen and (max-width: 425px) {
+    .modal-container {
+        width: 100%;
+        height: 100%;
+    }
+}
